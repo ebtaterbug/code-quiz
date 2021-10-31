@@ -14,24 +14,29 @@
     </header>
 
     <main>
-        <div class="wrapper">
-            <div class="content1">
-                <p>Test your knowledge of basic Java Script with this quick test. Get started by pressing the button beside and then save your time.</p>
+            <div id="div1" class="content1">
+                <p>Test your knowledge of basic Java Script with this quick test. Get started by pressing the button below and then save your time.</p>
                 <button id="start">Start</button>
             </div>
-            <div class="content2">
-                    <h2 class="questions">Question</h2>
-                    <ul class="questions">
-                        <li><button id="q1">Question 1</button></li>
-                        <li><button id="q2">Question 2</button></li>
-                        <li><button id="q3">Question 3</button></li>
-                        <li><button id="q4">Question 4</button></li>
+            <div id="div2"class="content2 display-none">
+                    <h2 class="questions" id="question">Question</h2>
+                    <ul class="buttons">
+                        <li><button class="answerbuttons" id="a1">Answer 1</button></li>
+                        <li><button class="answerbuttons" id="a2">Answer 2</button></li>
+                        <li><button class="answerbuttons" id="a3">Answer 3</button></li>
+                        <li><button class="answerbuttons" id="a4">Answer 4</button></li>
                     </ul>
+                    <p id="answer">Answer</p>
             </div>
-        </div>
+            <div id="div3" class="content3 display-none">
+                <h2>Quiz Complete!</h2>
+                <p>Your time was <span id="final-score"> 50</span> seconds. Enter your initals and save your score.</p>
+                <input type="text" name="test" id="initals">
+                <button id="save-score">Save Score</button>
+            </div>
     </main>
 
     <script src="assets\js\script.js"></script>
-
+    <script src="assets\js\questions.js"></script>
 </body>
 </html>

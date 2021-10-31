@@ -16,47 +16,76 @@ main {
     height: 100vh;
     display: flex;
     justify-content: center;
-}
-
-.wrapper {
-    background-color:rgb(195, 210, 211);
-    height: 500px;
-    width: 500px;
-    display: flex;
-    margin-top: 150px;
-    border-radius: 25px;
+    display: block;
 }
 
 .content1 {
+    background-color: lightgrey;
     color: lightslategray;
-    padding: 50px;    
-    display: flex;
-    size: auto;
+    height: auto;
+    width: 475px;
+    border-radius: 15px;
+    padding: 10px;
+    margin: auto;
+}
+
+.content2 {
+    background-color: lightgrey;
+    height: 330px;
+    width: 475px;
+    border-radius: 15px;
+    padding: 10px;
+    margin: auto;
+}
+
+.content3 {
+    background-color: lightgrey;
+    height: 300px;
+    width: 475px;
+    border-radius: 15px;
+    padding: 10px;
+    margin: auto;
+}
+
+input {
+    display: block;
+    margin: auto;
+}
+
+#save-score {
+    display: block;
+    margin: auto;
+}
+
+#final-score {
+    font-size: x-large;
+}
+
+.display-none {
+    display: none;
 }
 
 p {
     margin: 20px;
+    text-align: center;
+    color: gray;
 }
 
 #start {
-    background-color: lightslategray;
     justify-content: center;
     height: 50px;
     width: 90px;
     font-size: x-large;
     justify-content: center;
-    margin-top: 20px;
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    display: block;
+    border: none;
+    margin: auto;
 }
 
-.content2 {
-    background-color: lightgrey;
-    height: 475px;
-    width: 475px;
-    margin: auto;
-    align-items: center;
-    border-radius: 15px;
-    display: none;
-}
 
 h2 {
     text-align: center;
@@ -67,7 +96,7 @@ ul {
     list-style-type: none;
 }
 
-button {
+.buttons button{
     background-color: cadetblue;
     border: none;
     padding: 10px;
@@ -75,6 +104,17 @@ button {
     border-radius: 15px;
     color: white;
 }
+
+#save-score {
+    background-color: cadetblue;
+    border: none;
+    padding: 10px;
+    margin: auto;
+    border-radius: 15px;
+    color: white;
+}
+
+
 
 button:hover {
     opacity: 0.5;
