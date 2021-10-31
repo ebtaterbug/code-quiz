@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets\css\style.css">
+    <title>Code Quiz</title>
 </head>
 <body>
-    
+    <header>
+        <a id="high-scores" href="high-scores.html">View High Scores</a>
+        <div id="timer">Time: <span id="seconds">50</span></div>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <div class="content1">
+                <p>Test your knowledge of basic Java Script with this quick test. Get started by pressing the button beside and then save your time.</p>
+                <button id="start">Start</button>
+            </div>
+            <div class="content2">
+                    <h2 class="questions">Question</h2>
+                    <ul class="questions">
+                        <li><button id="q1">Question 1</button></li>
+                        <li><button id="q2">Question 2</button></li>
+                        <li><button id="q3">Question 3</button></li>
+                        <li><button id="q4">Question 4</button></li>
+                    </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets\js\script.js"></script>
+
 </body>
 </html>

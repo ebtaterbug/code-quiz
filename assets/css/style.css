@@ -1,0 +1,92 @@
+body {
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    color:cadetblue;
+    text-decoration: none;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    background-color:rgb(195, 210, 211);
+    height: 500px;
+    width: 500px;
+    display: flex;
+    margin-top: 150px;
+    border-radius: 25px;
+}
+
+.content1 {
+    color: lightslategray;
+    padding: 50px;    
+    display: flex;
+    size: auto;
+}
+
+p {
+    margin: 20px;
+}
+
+#start {
+    background-color: lightslategray;
+    justify-content: center;
+    height: 50px;
+    width: 90px;
+    font-size: x-large;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.content2 {
+    background-color: lightgrey;
+    height: 475px;
+    width: 475px;
+    margin: auto;
+    align-items: center;
+    border-radius: 15px;
+    display: none;
+}
+
+h2 {
+    text-align: center;
+    color: gray;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    background-color: cadetblue;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 15px;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+.button:active {    
+    
+}
+
+
+/* High Scores Page*/
+
+#high-scores {
+    text-align: center;
+}
