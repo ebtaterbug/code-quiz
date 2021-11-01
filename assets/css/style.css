@@ -114,8 +114,6 @@ ul {
     color: white;
 }
 
-
-
 button:hover {
     opacity: 0.5;
 }
@@ -129,4 +127,9 @@ button:hover {
 
 #high-scores {
     text-align: center;
+}
+
+#highscores {
+    text-align: center;
+    padding: 0px;
 }

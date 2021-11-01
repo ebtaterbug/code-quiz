@@ -1,9 +1,9 @@
 var secondsEl = parseInt(document.querySelector("#seconds").innerHTML);
 var startButtonEl = document.querySelector("#start");
+var initialsInputEl = document.querySelector("#initials");
+var saveScoreEl = document.querySelector("#save-score");
 
-var finalScore = [];
-
-var time = 50;
+var time = 60;
 var timerId;
 
 function startTimer() {
@@ -33,7 +33,6 @@ function loadNextQuestion() {
         document.getElementById("a2").textContent = questions[questionsIndex].answers[1];
         document.getElementById("a3").textContent = questions[questionsIndex].answers[2];
         document.getElementById("a4").textContent = questions[questionsIndex].answers[3];
-        
     }
     else {
         document.getElementById("div3").classList.remove("display-none");
@@ -46,17 +45,18 @@ function loadNextQuestion() {
 function checkAnswer() {
     if (questions[questionsIndex].correctAnswer == userAnswer) {
         document.getElementById("answer").textContent = "Correct";
-        console.log(userAnswer + questions[questionsIndex].correctAnswer + "correct");
         questionsIndex++  
     }
     else {
-        document.getElementById("answer").textContent = "False";
+        document.getElementById("answer").textContent = "Wrong";
         time = time - 10;
-        console.log(userAnswer + questions[questionsIndex].correctAnswer + "False");
         questionsIndex++
     }
     
 }
+
+
+
 
 startButtonEl.addEventListener("click", function() {
     startTimer();
@@ -65,5 +65,32 @@ startButtonEl.addEventListener("click", function() {
     loadNextQuestion();
 });
 
+saveScoreEl.addEventListener("click", function(){
+    var initials = initialsInputEl.value.trim();
+    
+    if (initials !== "") {
+        var highscores =
+          JSON.parse(window.localStorage.getItem("highscores")) || [];
+    
+        var finalScore = {
+            score: time,
+            initials: initials
+        };
+    
+        highscores.push(finalScore);
+        window.localStorage.setItem("highscores", JSON.stringify(highscores));
+    }
+    listHighScores();
+});
+
+function listHighScores() {
+    var listEL = document.createElement("li");
+    listEL.textContent = finalScore.initials + " - " + finalScore.score;
+
+    var orderedListEL = document.getElementById("highscores");
+    orderedListEL.appendChild(listEL);
+}
+
 document.getElementById("seconds").textContent = time;
 document.getElementById("final-score").textContent = time;   
+

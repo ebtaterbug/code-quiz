@@ -5,19 +5,19 @@ var questions = [
     correctAnswer: "Alerts"
 },
 {
-    question: "question2",
-    answers: ["A", "B", "C", "D"],
-    correctAnswer: "B"
+    question: "The condition in an if / else statement is enclosed with...",
+    answers: ["quotes", "curly brackets", "parenthesis", "square brackets"],
+    correctAnswer: "parenthesis"
 },
 {
-    question: "question3",
-    answers: ["A", "B", "C", "D"],
-    correctAnswer: "C"
+    question: "String values must be enclosed within _____ when being assigned to variables:",
+    answers: ["commas", "curly brackets", "quotes", "parenthesis"],
+    correctAnswer: "quotes"
 },
 {
-    question: "question4",
-    answers: ["A", "B", "C", "D"],
-    correctAnswer: "D"
+    question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+    answers: ["Java Script", "terminal/bash", "for loops", "console.log"],
+    correctAnswer: "console.log"
 }
 ];
 
