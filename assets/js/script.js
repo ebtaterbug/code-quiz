@@ -6,6 +6,11 @@ var saveScoreEl = document.querySelector("#save-score");
 var time = 60;
 var timerId;
 
+var finalScore = {
+    score: time,
+    initials: initials
+};
+
 function startTimer() {
     timeId = setInterval(timer, 1000);
 }
@@ -67,15 +72,16 @@ startButtonEl.addEventListener("click", function() {
 
 saveScoreEl.addEventListener("click", function(){
     var initials = initialsInputEl.value.trim();
-    
+
     if (initials !== "") {
         var highscores =
           JSON.parse(window.localStorage.getItem("highscores")) || [];
-    
+        
         var finalScore = {
             score: time,
             initials: initials
-        };
+            };
+
     
         highscores.push(finalScore);
         window.localStorage.setItem("highscores", JSON.stringify(highscores));
@@ -83,14 +89,6 @@ saveScoreEl.addEventListener("click", function(){
     listHighScores();
 });
 
-function listHighScores() {
-    var listEL = document.createElement("li");
-    listEL.textContent = finalScore.initials + " - " + finalScore.score;
-
-    var orderedListEL = document.getElementById("highscores");
-    orderedListEL.appendChild(listEL);
-}
 
 document.getElementById("seconds").textContent = time;
 document.getElementById("final-score").textContent = time;   
-
